@@ -34,3 +34,15 @@ def solution(n):
 s = solution(8)
 print(s)
 print(len(s))
+
+
+# Short smart solution
+def solution(n, coords=[], sln=[]):
+    if len(coords) == n: 
+        sln.append(coords)
+    for row in range(1,n+1):
+        for c,r in enumerate(coords):
+            if r == row or abs(r - row) == abs(c - len(coords)): break
+        else: 
+            solution(n, coords+[row], sln)
+    return sln
