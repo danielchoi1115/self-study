@@ -20,9 +20,6 @@ for i, h in reversed(s.items()):
 
 
 def cal(L):
-    area = 0
-    for i in range(len(L)-1):
-        area += abs(L[i+1]-L[i]) * s[L[i]]
-    return area
+    return sum(abs(L[i+1]-L[i]) * s[L[i]] for i in range(len(L)-1))
 
 print(cal(ll) + cal(rl) + lmax)
