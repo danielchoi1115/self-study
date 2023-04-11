@@ -2,3 +2,6 @@ coding-test/programmers-java/out/
 coding-test/programmers-java/.idea/
 .vscode
 *.exe
+input.txt
+output.txt
+test*
